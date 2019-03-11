@@ -1,0 +1,360 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: white;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+section.sec2 {
+    background-size: cover;
+    background-position: center;
+    padding: 25px 100px;
+    box-sizing: border-box;  
+}
+
+section.sec2 h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0 0 20px;
+    color: black;
+}
+
+section.sec2 p {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+section.sec3 {
+    width: 100%;
+    height: 100vh;
+    background: /* linear-gradient(rgba(0,0,100,0.5), rgba(0,0,100,0.5)), */ url("../images/Home5.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: sticky;
+    top: 0px; /* makes the navbar stick to top of page upon scolling */
+    /* top: 50px; */  /* makes the navbar stick 50px from top when scolling */
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    white-space: nowrap;
+
+/*  background: rgba(0, 0, 0, .75);  /* black color */
+    background: rgba(21, 27, 31, .8);  /* dark charcoal grey color */
+/*  background: rgba(76, 60, 42, .8);  /* camel color*/
+/*  background: rgba(39, 73, 101, .8);  /* champion cobalt */
+/*  background: rgba(7, 4, 182, .8); /* deep royal blue */
+/*  background: rgba(100, 82, 82, .8); /* melinnial pink */
+/*  background: rgba(255, 192, 203, .8); /* pink */
+    
+    border-top: 1px solid rgba(255, 192, 203, 1);
+    border-bottom: 1px solid rgba(255, 192, 203, 1);
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0 100px;
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    color: pink;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400; 
+    line-height: 50px;
+}
+
+nav ul li a:hover {
+    /* background: #f00; */
+    background: black;
+    /* background: rgba(76, 60, 42, 1); /* camel */
+    /* background: rgba(21, 27, 31, 1); /* charcoal grey */
+    /* background: rgba(39, 73, 101, 1); /* champion cobalt */
+    /* background: rgba(7, 4, 182, 1); /* deep royal blue */
+    /* background: rgba(100, 82, 82, 1); /* melinnial pink */
+    /* background: pink; */
+}
+
+nav ul li a.active {
+    /* background: #f00; */
+    background: black; 
+    /* background: rgba(76, 60, 42, 1); camel */
+    /* background: rgba(21, 27, 31, 1); /* charcoal grey */
+    /* background: rgba(39, 73, 101, 1); /* champion cobalt */
+    /* background: rgba(7, 4, 182, 1); deep royal blue */
+    /* background: rgba(100, 82, 82, 1); melinnial pink */
+    /* background: pink; */
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    visibility: hidden;
+    flex-direction: column;
+    padding: 0px;
+    text-align: left;
+    top: 50px;
+    width: 150px;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    background: rgba(21, 27, 31, .8); /* charcoal grey */
+}
+
+.container1 {
+    background-size: cover;
+    background-position: center;
+    background: #f9f9f9;
+    font-size: 24px;
+}
+
+.container2 {
+    background-size: cover;
+    background-position: center;
+    background: #f9f9f9;
+}
+
+.container2 p {
+    font-size: 1.2em;
+    padding: 25px 100px;
+}
+
+.parallax {
+    min-height: 400px;
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+/* Responsive NavBar */
+@media screen and (max-width: 1000px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        height: 95px;
+        background: rgba(21, 27, 31, .8); /* charcoal grey */;
+    }
+
+    .logo {
+        height: 75px;
+        float: left;
+    }
+
+    nav {
+        height: 0;
+        width: 0;
+        border-top: 0;
+        border-bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; /* centers menu content vertically */
+        min-height: 0vh;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+     
+    nav ul li a {
+        padding: 0;
+        width: 100%;
+    }
+
+    nav ul li a.active {
+        background: 0;
+    }
+    
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        display: flex;
+        top: 0;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(21, 27, 31, .8); /* charcoal grey */;
+        width: 50%;  /* width of the navbar background */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    nav ul:hover li {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a.active:hover {
+        background: black;
+    }
+
+    nav ul li ul {
+        position: static;
+        width: 100%;
+    }
+
+    .burger {
+        display: block;
+    }
+
+
+    .nav-btn {
+        position: fixed;
+        right: 20px;
+        top: 25px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+
+    .nav-btn i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #000;
+        border-radius: 2px;
+        margin-left: 14px;
+    }
+
+    .nav-btn i:nth-child(1) {
+        margin-top: 16px;
+    }
+    .nav-btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+    .nav-btn i:nth-child(3) {
+        margin-top: 4px;
+    }
+
+    section.sec2 {
+        max-width: 100%;
+        height: auto;
+        padding: 25px 100px;
+        box-sizing: border-box;  
+    }
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: pink;
+    transition: transform 0.5s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
+
+#nav:not(checked) + .nav-btn i {
+    background: pink;
+    transition: transform 0.5s ease;
+}
+
+#nav:not(checked) + .nav-btn i:nth-child(1) {
+    transform: translateY(-2px) rotate(-180px);
+    margin-top: 16px;
+}
+
+#nav:not(checked) + .nav-btn i:nth-child(2) {
+    transform: translateY(0px) rotate(-180deg);
+    opacity: 1;
+}
+
+#nav:not(checked) + .nav-btn i:nth-child(3) {
+    transform: translateY(0px) rotate(-180deg);
+    
+}
+
