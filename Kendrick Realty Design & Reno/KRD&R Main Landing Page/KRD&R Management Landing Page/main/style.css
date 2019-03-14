@@ -55,13 +55,13 @@ nav {
     height: 50px;
     white-space: nowrap;
 
-/*  background: rgba(0, 0, 0, .75);  /* black color */
+/*    background: rgba(0, 0, 0, .75);  /* black color */
     background: rgba(21, 27, 31, .8);  /* dark charcoal grey color */
-/*  background: rgba(76, 60, 42, .8);  /* camel color*/
-/*  background: rgba(39, 73, 101, .8);  /* champion cobalt */
-/*  background: rgba(7, 4, 182, .8); /* deep royal blue */
-/*  background: rgba(100, 82, 82, .8); /* melinnial pink */
-/*  background: rgba(255, 192, 203, .8); /* pink */
+/*    background: rgba(76, 60, 42, .8);  /* camel color*/
+/*    background: rgba(39, 73, 101, .8);  /* champion cobalt */
+/*    background: rgba(7, 4, 182, .8); /* deep royal blue */
+/*    background: rgba(100, 82, 82, .8); /* melinnial pink */
+/*    background: rgba(255, 192, 203, .8); /* pink */
     
     border-top: 1px solid rgba(255, 192, 203, 1);
     border-bottom: 1px solid rgba(255, 192, 203, 1);
@@ -153,6 +153,90 @@ nav ul li:hover ul {
 .parallax {
     min-height: 400px;
     background: transparent;
+}
+
+footer {
+    color: black;
+    background: rgba(21, 27, 31, .7);  /* dark charcoal grey color */
+    display: grid;
+    border-top: 2px solid pink;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: pink;
+}
+
+footer p {
+    color: black;
+}
+
+.footerAboutUs {
+    width: 25%;
+    padding: 0px 25px;
+    text-align: left;
+    float: left;
+}
+
+.footerAboutUs h2 {
+    letter-spacing: 2px;  
+    border-bottom: 1px solid black;  
+    text-transform: uppercase;
+}
+
+.footerTestimonials {
+    width: 25%;
+    padding: 0px 25px;
+    text-align: left;
+    float: left;
+}
+
+.footerTestimonials h2 {
+    letter-spacing: 2px; 
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+}
+
+.footerContactUs {
+    width: 33%;
+    padding: 0px 25px;  
+    text-align: left;
+    float: right;
+}
+
+.footerContactUs h2 {
+    letter-spacing: 2px; 
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+}
+
+.footerContactUs h3 {
+    color: black;
+}
+
+.footerContactUs .fas {
+    padding-right: 15px;
+}
+
+.socialIcons ul li {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    display:  inline-block;
+    list-style: none;
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.bottomFooter {
+    padding: 25px;
+    bottom: 0;
+    font-size: 10px;
+    border-top: 1px solid black;
 }
 
 
@@ -285,6 +369,9 @@ nav ul li:hover ul {
         box-sizing: border-box;  
     }
 
+    .footerContactUs {
+        width: 45%;
+    }
 }
 
 .nav-active {
@@ -356,5 +443,59 @@ nav ul li:hover ul {
 #nav:not(checked) + .nav-btn i:nth-child(3) {
     transform: translateY(0px) rotate(-180deg);
     
+}
+
+
+
+
+@media screen and (max-width: 780px) {
+
+    .footerWrapper {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        clear: both;
+        display: flex;
+    }
+
+    .footerAboutUs {
+        float: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+        padding: 5px 25px;
+    }
+
+    .footerAboutUs p {
+        display: none;
+    }
+
+    .footerTestimonials {
+        float: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+        padding: 5px 25px;
+    }
+
+    .footerTestimonials p {
+        display: none;
+    }
+
+    .footerContactUs {
+        float: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+        padding: 5px 25px;
+    }
+
+    .bottomFooter {
+        float: none;
+        text-align: center;
+    }
 }
 
