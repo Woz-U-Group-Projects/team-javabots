@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+
 <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -131,23 +131,9 @@
 		<div class="container">
 			<div class="row">
 
-				<!-- About Content -->
-				<div class="col-lg-6">
-					<div class="about_content">
-						<div class="section_title">About</div>
-						<div class="section_subtitle">Your home now</div>
-						<div class="about_text">
-							<p>Etiam nec odio vestibulum est mattis effic iturut magna. </p>
-						</div>
-					</div>
-				</div>
+				
 
-				<!-- About Image -->
-				<div class="col-lg-6">
-					<div class="about_image"><img src="images/about_image.jpg" alt=""></div>
-				</div>
-			</div>
-			<div class="row milestones_row">
+				
 
 				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
@@ -194,9 +180,69 @@
 					</div>
 				</div>
 
+				<!-- About Content -->
+				<div class="col-lg-6">
+						<div class="about_content">
+							<div class="section_title">About</div>
+							<div class="section_subtitle">Your home now</div>
+							<div class="about_text">
+								<p>Etiam nec odio vestibulum est mattis effic iturut magna. </p>
+							</div>
+						</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
+
+	<!-- Testimonials -->
+
+	<div class="testimonials">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title">What people are saying</div>
+						<div class="section_subtitle">Find your home now</div>
+					</div>
+				</div>
+				<div class="row testimonials_row">
+					
+					<!-- Testimonial Item -->
+					<div class="col-lg-4 testimonial_col">
+						<div class="testimonial">
+							<div class="testimonial_title">Great place to live</div>
+							<div class="testimonial_text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</div>
+							<div class="testimonial_author_image"><img src="images/testimonial_1.jpg" alt=""></div>
+							<div class="testimonial_author"><a href="#">Person 1</a><span>, Renter</span></div>
+							<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
+						</div>
+					</div>
+	
+					<!-- Testimonial Item -->
+					<div class="col-lg-4 testimonial_col">
+						<div class="testimonial">
+							<div class="testimonial_title">Great people to work with</div>
+							<div class="testimonial_text">Nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit.</div>
+							<div class="testimonial_author_image"><img src="images/testimonial_2.jpg" alt=""></div>
+							<div class="testimonial_author"><a href="#">Person 2</a><span>, Owner</span></div>
+							<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
+						</div>
+					</div>
+	
+					<!-- Testimonial Item -->
+					<div class="col-lg-4 testimonial_col">
+						<div class="testimonial">
+							<div class="testimonial_title">I love my job</div>
+							<div class="testimonial_text">Retiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</div>
+							<div class="testimonial_author_image"><img src="images/testimonial_3.jpg" alt=""></div>
+							<div class="testimonial_author"><a href="#">Person 3</a><span>, Manager</span></div>
+							<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+		</div>
 
 	<!-- Props -->
 
@@ -306,82 +352,7 @@
 		</div>
 	</div>
 
-	<!-- Sidebar Search -->
-	<div class="sidebar_search">
-			<div class="sidebar_search_title">Search your home</div>
-			<div class="sidebar_search_form_container">
-				<form action="#" class="sidebar_search_form" id="sidebar_search_form">
-					<select class="sidebar_search_select">
-						<option disabled selected>Keywords</option>
-						<option>Pool</option>
-						<option>Porch</option>
-						<option>Garage</option>
-						<option>Garden</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>Property ID</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>Property Status</option>
-						<option>For Rent</option>
-						<option>Rented</option>
-						<option>Repairs</option>
-						<option>New Build</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>City</option>
-						<option>Somewhere</option>
-						<option>Anywhere</option>
-						<option>Nearby</option>
-						<option>Here</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>Property Type</option>
-						<option>House</option>
-						<option>Condo</option>
-						<option>Apartment</option>
-						<option>Garage</option>
-					</select>
-					<div class="row sidebar_search_row">
-						<div class="col-lg-6">
-							<input type="text" class="sidebar_search_input" placeholder="Bedrooms No">
-						</div>
-						<div class="col-lg-6">
-							<input type="text" class="sidebar_search_input" placeholder="Bathrooms No">
-						</div>
-					</div>
-
-					<!-- Filter Price -->
-					<div class="price_filter">
-						<div class="price_filter_values d-flex flex-row align-items-center justfy-content-start">
-							<div>Min Price</div>
-							<div class="ml-auto">Max Price</div>
-						</div>
-						<input type="range" min="0" max="1000" step="10" value="250" data-rangeslider="" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
-					</div>
-
-					<!-- Filter Area -->
-					<div class="area_filter">
-						<div class="price_filter_values d-flex flex-row align-items-center justfy-content-start">
-							<div>Min Price</div>
-							<div class="ml-auto">Max Price</div>
-						</div>
-						<input type="range" min="0" max="1000" step="10" value="300" data-rangeslider="" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
-					</div>
-					<button class="sidebar_search_button_2 search_form_button_2">search</button>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
-</div>
-</div>
-
+	
 	<!-- Footer -->
 
 	<footer>
