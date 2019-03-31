@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <title>KRD&R Management</title>
 <meta charset="utf-8">
@@ -11,17 +14,14 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/styles1.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-
 <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="parallax.min.js"></script>
-
-	
 </head>
 <body>
 
@@ -41,21 +41,21 @@
 								<nav class="main_nav">
 									<div class="nav-wrapper">
 										<ul class="nav-links">
-											<li><a href="index.html" class="active">Home</a></li>
-											<li><a href="about.html">About</a></li>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="rentals.html">Rentals</a></li>
-											<li><a href="resources.html">Resources</a>
+											<li><a th:href="@{/}" href="index.html" class="active">Home</a></li>
+											<li><a th:href="@{/about}" href="about.html">About</a></li>
+											<li><a th:href="@{/services}" href="services.html">Services</a></li>
+											<li><a th:href="@{/rentals}" href="rentals.html">Rentals</a></li>
+											<li><a href="#">Resources</a>
 												<ul>
-													<li><a href="#">Owner</a></li>
-													<li><a href="#">Resident</a></li>
+													<li><a th:href="@{/oresources}" href="oresources.html">Owner</a></li>
+													<li><a th:href="@{/rresources}" href="rresources.html">Resident</a></li>
 												</ul>
 											</li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="login.html">Log In</a>
+											<li><a th:href="@{/contact}" href="contact.html">Contact</a></li>
+											<li><a th:href="@{/login}" href="login.html">Log In</a>
 												<ul>
-													<li><a href="#">Owner</a></li>
-													<li><a href="#">Resident</a></li>
+													<li><a th:href="@{/osecure}" href="osecure.html">Owner</a></li>
+													<li><a th:href="@{/rsecure}" href="rsecure.html">Resident</a></li>
 												</ul>
 											</li>
 										</ul>
@@ -78,48 +78,49 @@
 					</a>
 				</div>
 				<ul class="nav-links">
-					<li><a href="index.html" class="active">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="rentals.html">Rentals</a></li>
-					<li><a href="resources.html">Resources</a>
+					<li><a th:href="@{/}" href="index.html" class="active">Home</a></li>
+					<li><a th:href="@{/about}" href="about.html">About</a></li>
+					<li><a th:href="@{/services}" href="services.html">Services</a></li>
+					<li><a th:href="@{/rentals}" href="rentals.html">Rentals</a></li>
+					<li><a href="#">Resources</a>
 						<ul>
-							<li><a href="#">Owner</a></li>
-							<li><a href="#">Resident</a></li>
+							<li><a th:href="@{/oresources}" href="oresources.html">Owner</a></li>
+							<li><a th:href="@{/rresources}" href="rresources.html">Resident</a></li>
 						</ul>
 					</li>
-					<li><a href="contact.html">Contact</li>
-					<li><a href="login.html">Log In</a>
+					<li><a th:href="@{/contact}"  href="contact.html">Contact</li>
+					<li><a th:href="@{/login}" href="login.html">Log In</a>
 						<ul>
-							<li><a href="#">Owner</a></li>
-							<li><a href="#">Resident</a></li>
+							<li><a th:href="@{/osecure}"href="osecure.html">Owner</a></li>
+							<li><a th:href="@{/rsecure}"href="rsecure.html">Resident</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 			<div class="menu_phone"><span>call us: </span>555-555-5555</div>
-		</div>
+        </div>
+
 		
 	<!-- Home -->
 
-	<div class="home">
+	<div class="home_1">
 
 		<!-- Home Slider -->
-		<div class="home_slider_container">
+		<div class="home_slider_container_1">
 			<div class="owl-carousel owl-theme home_slider">
 				
-				<!-- Slide 1 -->
+				<!-- Slide 0 -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(images/home_slider_1.jpg)"></div>
-					<div class="slide_container">
+					<div class="home_slider_background_1" style="background-image:url(images/home_slider_1.jpg)"></div>
+					<div class="slide_container_1">
 						<div class="container">
 							<div class="row">
 								<div class="col">
-									<div class="slide_content">
-										<div class="home_subtitle">price reduced</div>
-										<div class="home_title">walk to work</div>
+									<div class="slide_content_1">
+										<div class="home_subtitle_1">price reduced</div>
+										<div class="home_title_1">walk to work</div>
 										
-										<div class="home_price">$777</div>
+										<div class="home_price_1">$777</div>
 									</div>
 								</div>
 							</div>
@@ -132,65 +133,7 @@
 		</div>
 	</div>
 
-	<!-- Home Search -->
-	<div class="home_search">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="home_search_container">
-						<div class="home_search_content">
-							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
-								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>For rent</option>
-											<option>Yes</option>
-											<option>No</option>
-										</select>
-									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>All types</option>
-											<option>House</option>
-											<option>Condo</option>
-											<option>Apartment</option>
-											<option>Garage</option>
-										</select>
-									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>City</option>
-											<option>Somewhere</option>
-											<option>Nearby</option>
-											<option>Anywhere</option>
-											<option>Home</option>
-										</select>
-									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>Bedrooms</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-										</select>
-									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>Bathrooms</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
-									</div>
-								</div>
-								<button class="search_form_button ml-auto">search</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	
 	</div>
 
 	<!-- Recent -->
@@ -218,7 +161,7 @@
 										</div>
 										<div class="recent_item_body text-center">
 											<div class="recent_item_location">Texas</div>
-											<div class="recent_item_title"><a href="property.html">Great Views</a></div>
+											<div class="recent_item_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
 											<div class="recent_item_price">$1,000</div>
 										</div>
 										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
@@ -240,7 +183,7 @@
 										</div>
 										<div class="recent_item_body text-center">
 											<div class="recent_item_location">Texas</div>
-											<div class="recent_item_title"><a href="property.html">House</a></div>
+											<div class="recent_item_title"><a th:href="@{/property}" href="property.html">House</a></div>
 											<div class="recent_item_price">$800</div>
 										</div>
 										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
@@ -262,7 +205,7 @@
 										</div>
 										<div class="recent_item_body text-center">
 											<div class="recent_item_location">Florida</div>
-											<div class="recent_item_title"><a href="property.html">Vacation Home</a></div>
+											<div class="recent_item_title"><a th:href="@{/property}" href="property.html">Vacation Home</a></div>
 											<div class="recent_item_price">$900</div>
 										</div>
 										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
