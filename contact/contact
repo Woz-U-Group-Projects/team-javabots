@@ -1,85 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Contact</title>
+<title>KRD&R Management</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Property Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/rangeslider.js-2.3.0/rangeslider.css">
-<link rel="stylesheet" type="text/css" href="styles/contact.css">
-<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/styles1.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.min.js"></script>
 </head>
 <body>
 
-<div class="super_container">
+	<div class="super_container">
 
-	<!-- Header -->
-
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="logo">
-							<a href="#"><img src="images/logo.png" alt=""></a>
-						</div>
-						<nav class="main_nav">
-								<div class="nav-wrapper">
-									<ul class="nav-links">
-										<li><a href="index.html" class="active">Home</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="services.html">Services</a></li>
-										<li><a href="rentals.html">Rentals</a></li>
-										<li><a href="resources.html">Resources</a>
-											<ul>
-												<li><a href="#">Owner</a></li>
-												<li><a href="#">Resident</a></li>
-											</ul>
-										</li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="login.html">Log In</a>
-											<ul>
-												<li><a href="#">Owner</a></li>
-												<li><a href="#">Resident</a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</nav>
-						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
+		<!-- Header -->
+	
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo">
+								<a href="#"><img src="../images/Logo2.jpeg" alt=""></a>
+							</div>
+							<div class="container">
+								<nav class="main_nav">
+									<div class="nav-wrapper">
+										<ul class="nav-links">
+											<li><a th:href="@{/}" href="index.html" class="active">Home</a></li>
+											<li><a th:href="@{/about}" href="about.html">About</a></li>
+											<li><a th:href="@{/services}" href="services.html">Services</a></li>
+											<li><a th:href="@{/rentals}" href="rentals.html">Rentals</a></li>
+											<li><a href="#">Resources</a>
+												<ul>
+													<li><a th:href="@{/oresources}" href="oresources.html">Owner</a></li>
+													<li><a th:href="@{/rresources}" href="rresources.html">Resident</a></li>
+												</ul>
+											</li>
+											<li><a th:href="@{/contact}" href="contact.html">Contact</a></li>
+											<li><a th:href="@{/login}" href="login.html">Log In</a>
+												<ul>
+													<li><a th:href="@{/osecure}" href="osecure.html">Owner</a></li>
+													<li><a th:href="@{/rsecure}" href="rsecure.html">Resident</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</nav>
+								<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+							</div>
+							</header>   
+	
 	<!-- Menu -->
 
 	<div class="menu trans_500">
-		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<div class="logo menu_logo">
-				<a href="#">
-					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-						<div class="logo_image"><div><img src="images/logo.png" alt=""></div></div>
-					</div>
-				</a>
+			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+				<div class="menu_close_container"><div class="menu_close"></div></div>
+				<div class="logo menu_logo">
+					<a href="#">
+						<div class="logo_container d-flex flex-row align-items-start justify-content-start">
+							<div class="logo_image"><div><img src="images/logo.png" alt=""></div></div>
+						</div>
+					</a>
+				</div>
+				<ul class="nav-links">
+					<li><a th:href="@{/}" href="index.html" class="active">Home</a></li>
+					<li><a th:href="@{/about}" href="about.html">About</a></li>
+					<li><a th:href="@{/services}" href="services.html">Services</a></li>
+					<li><a th:href="@{/rentals}" href="rentals.html">Rentals</a></li>
+					<li><a href="#">Resources</a>
+						<ul>
+							<li><a th:href="@{/oresources}" href="oresources.html">Owner</a></li>
+							<li><a th:href="@{/rresources}" href="rresources.html">Resident</a></li>
+						</ul>
+					</li>
+					<li><a th:href="@{/contact}"  href="contact.html">Contact</li>
+					<li><a th:href="@{/login}" href="login.html">Log In</a>
+						<ul>
+							<li><a th:href="@{/osecure}"href="osecure.html">Owner</a></li>
+							<li><a th:href="@{/rsecure}"href="rsecure.html">Resident</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
-			<ul>
-				<li class="menu_item"><a href="index.html">Home</a></li>
-				<li class="menu_item"><a href="about.html">About</a></li>
-				<li class="menu_item"><a href="properties.html">Properties</a></li>
-				
-				<li class="menu_item"><a href="news.html">News</a></li>
-				<li class="menu_item"><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<div class="menu_phone"><span>call us: </span>555-555-5555</div>
-	</div>
-	
+			<div class="menu_phone"><span>call us: </span>555-555-5555</div>
+        </div>
+
 	<!-- Home -->
 
 	<div class="home">
@@ -139,19 +159,19 @@
 				<!-- Contact Form -->
 				<div class="col-lg-8">
 					<div class="contact_form_container">
-						<form action="#" class="contact_form" id="contact_form">
+						<form action="#" th:action="@{/contact}" th:object="${person}" method="post" class="contact_form" id="contact_form">
 							<div class="row">
 								<!-- Name -->
 								<div class="col-lg-6 contact_name_col">
-									<input type="text" class="contact_input" placeholder="Name" required="required">
+									<input th:field="*{name}" type="text" class="contact_input" placeholder="Name" required="required">
 								</div>
 								<!-- Email -->
 								<div class="col-lg-6">
-									<input type="email" class="contact_input" placeholder="E-mail" required="required">
+									<input th:field="*{email}" type="email" class="contact_input" placeholder="E-mail" required="required">
 								</div>
 							</div>
-							<div><input type="text" class="contact_input" placeholder="Subject"></div>
-							<div><textarea class="contact_textarea contact_input" placeholder="Message" required="required"></textarea></div>
+							<div><input th:field="*{subject}" type="text" class="contact_input" placeholder="Subject"></div>
+							<div><textarea th:field="*{message}" class="contact_textarea contact_input" placeholder="Message" required="required"></textarea></div>
 							<button class="contact_button button">send</button>
 						</form>
 					</div>
@@ -207,6 +227,6 @@
 <script src="plugins/rangeslider.js-2.3.0/rangeslider.min.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
-<script src="js/contact.js"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>
