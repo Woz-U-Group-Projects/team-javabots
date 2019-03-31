@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <title>KRD&R Management</title>
 <meta charset="utf-8">
@@ -11,17 +14,14 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/styles1.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-<link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="parallax.min.js"></script>
-
-	
 </head>
 <body>
 
@@ -41,21 +41,21 @@
 								<nav class="main_nav">
 									<div class="nav-wrapper">
 										<ul class="nav-links">
-											<li><a href="index.html" class="active">Home</a></li>
-											<li><a href="about.html">About</a></li>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="rentals.html">Rentals</a></li>
-											<li><a href="resources.html">Resources</a>
+											<li><a th:href="@{/}" href="index.html" class="active">Home</a></li>
+											<li><a th:href="@{/about}" href="about.html">About</a></li>
+											<li><a th:href="@{/services}" href="services.html">Services</a></li>
+											<li><a th:href="@{/rentals}" href="rentals.html">Rentals</a></li>
+											<li><a href="#">Resources</a>
 												<ul>
-													<li><a href="#">Owner</a></li>
-													<li><a href="#">Resident</a></li>
+													<li><a th:href="@{/oresources}" href="oresources.html">Owner</a></li>
+													<li><a th:href="@{/rresources}" href="rresources.html">Resident</a></li>
 												</ul>
 											</li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="login.html">Log In</a>
+											<li><a th:href="@{/contact}" href="contact.html">Contact</a></li>
+											<li><a th:href="@{/login}" href="login.html">Log In</a>
 												<ul>
-													<li><a href="#">Owner</a></li>
-													<li><a href="#">Resident</a></li>
+													<li><a th:href="@{/osecure}" href="osecure.html">Owner</a></li>
+													<li><a th:href="@{/rsecure}" href="rsecure.html">Resident</a></li>
 												</ul>
 											</li>
 										</ul>
@@ -63,42 +63,44 @@
 								</nav>
 								<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 							</div>
-			</header>   
-
+							</header>   
+	
 	<!-- Menu -->
 
 	<div class="menu trans_500">
-		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<div class="logo menu_logo">
-				<a href="#">
-					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-						<div class="logo_image"><div><img src="images/logo.png" alt=""></div></div>
-					</div>
-				</a>
+			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+				<div class="menu_close_container"><div class="menu_close"></div></div>
+				<div class="logo menu_logo">
+					<a href="#">
+						<div class="logo_container d-flex flex-row align-items-start justify-content-start">
+							<div class="logo_image"><div><img src="images/logo.png" alt=""></div></div>
+						</div>
+					</a>
+				</div>
+				<ul class="nav-links">
+					<li><a th:href="@{/}" href="index.html" class="active">Home</a></li>
+					<li><a th:href="@{/about}" href="about.html">About</a></li>
+					<li><a th:href="@{/services}" href="services.html">Services</a></li>
+					<li><a th:href="@{/rentals}" href="rentals.html">Rentals</a></li>
+					<li><a href="#">Resources</a>
+						<ul>
+							<li><a th:href="@{/oresources}" href="oresources.html">Owner</a></li>
+							<li><a th:href="@{/rresources}" href="rresources.html">Resident</a></li>
+						</ul>
+					</li>
+					<li><a th:href="@{/contact}"  href="contact.html">Contact</li>
+					<li><a th:href="@{/login}" href="login.html">Log In</a>
+						<ul>
+							<li><a th:href="@{/osecure}"href="osecure.html">Owner</a></li>
+							<li><a th:href="@{/rsecure}"href="rsecure.html">Resident</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
-			<ul class="nav-links">
-				<li><a href="index.html" class="active">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="rentals.html">Rentals</a></li>
-				<li><a href="resources.html">Resources</a>
-					<ul>
-						<li><a href="#">Owner</a></li>
-						<li><a href="#">Resident</a></li>
-					</ul>
-				</li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="login.html">Log In</a>
-					<ul>
-						<li><a href="#">Owner</a></li>
-						<li><a href="#">Resident</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<div class="menu_phone"><span>call us: </span>555-555-5555</div>
-	</div>
+			<div class="menu_phone"><span>call us: </span>555-555-5555</div>
+        </div>
+
+
 	
 	<!-- Home -->
 
@@ -112,7 +114,7 @@
 							<div class="home_title">Search results</div>
 							<div class="breadcrumbs ml-auto">
 								<ul>
-									<li><a href="index.html">Home</a></li>
+									<li><a href="index.htmo">Home</a></li>
 									<li>Search Results</li>
 								</ul>
 							</div>
@@ -125,384 +127,401 @@
 
 	<!-- Home Search -->
 	<div class="home_search">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="home_search_container">
-						<div class="home_search_content">
-							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
-								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>For rent</option>
-											<option>Yes</option>
-											<option>No</option>
-										</select>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_search_container">
+							<div class="home_search_content">
+								<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
+									<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
+										<div>
+											<select class="search_form_select">
+												<option disabled selected>For rent</option>
+												<option>Yes</option>
+												<option>No</option>
+											</select>
+										</div>
+										<div>
+											<select class="search_form_select">
+												<option disabled selected>All types</option>
+												<option>House</option>
+												<option>Condo</option>
+												<option>Apartment</option>
+												<option>Garage</option>
+											</select>
+										</div>
+										<div>
+											<select class="search_form_select">
+												<option disabled selected>City</option>
+												<option>Somewhere</option>
+												<option>Nearby</option>
+												<option>Anywhere</option>
+												<option>Home</option>
+											</select>
+										</div>
+										<div>
+											<select class="search_form_select">
+												<option disabled selected>Bedrooms</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+										<div>
+											<select class="search_form_select">
+												<option disabled selected>Bathrooms</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+										</div>
 									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>All types</option>
-											<option>House</option>
-											<option>Condo</option>
-											<option>Apartment</option>
-											<option>Garage</option>
-										</select>
-									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>City</option>
-											<option>Somewhere</option>
-											<option>Nearby</option>
-											<option>Anywhere</option>
-											<option>Here</option>
-										</select>
-									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>Bedrooms</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-										</select>
-									</div>
-									<div>
-										<select class="search_form_select">
-											<option disabled selected>Bathrooms</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
-									</div>
-								</div>
-								<button class="search_form_button ml-auto">search</button>
-							</form>
+									<button class="search_form_button ml-auto">search</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+
+	
+
+
+	
+	
+	
+
+		<!-- Property -->
+
+	<div class="property">
+		<div class="container">
+			<div class="row">
+
+					
+				
+				<!-- Sidebar -->
+
+				<div class="col-lg-4">
+					<div class="sidebar">
+						<div class="sidebar_search">
+							<div class="sidebar_search_title"> Expanded Search</div>
+							<div class="sidebar_search_form_container">
+								<form action="#" class="sidebar_search_form" id="sidebar_search_form">
+									<select class="sidebar_search_select">
+										<option disabled selected>Keywords</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+									</select>
+									<select class="sidebar_search_select">
+										<option disabled selected>Property ID</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+									</select>
+									<select class="sidebar_search_select">
+										<option disabled selected>Property Status</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+									</select>
+									<select class="sidebar_search_select">
+										<option disabled selected>City</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+									</select>
+									<select class="sidebar_search_select">
+										<option disabled selected>Property Type</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+										<option>Option</option>
+									</select>
+									<div class="row sidebar_search_row">
+										<div class="col-lg-6">
+											<input type="text" class="sidebar_search_input" placeholder="Bedrooms No">
+										</div>
+										<div class="col-lg-6">
+											<input type="text" class="sidebar_search_input" placeholder="Bathrooms No">
+										</div>
+									</div>
+								
+									<br>
+									<br>
+									
+									<button class="sidebar_search_button search_form_button">search</button>
+								</form>
+
+								<br>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Property On Map -->
+					<div class="col-lg-8">
+						<br>
+						<br>
+						<br>
+						<div class="contact_map">
+							<!-- Google Map -->
+							<div class="map">
+								<div id="google_map" class="google_map">
+									<div class="map_container">
+										<div id="map"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+
+				
 			</div>
 		</div>
 	</div>
+	
+		
 
-	<!-- Properties -->
+				<!-- Properties -->
 
-	<div class="properties">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title">25 Properties found</div>
-					<div class="section_subtitle">Find your home now</div>
+		<div class="properties">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title">9 Homes Found</div>
+						<div class="section_subtitle">Find your home</div>
+					</div>
 				</div>
-			</div>
-			<div class="row properties_row">
+				<div class="row properties_row">
+					
+					<!-- Property 1 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_1.jpg" alt="">
+								<div class="tag_featured property_tag"><a href="#">Featured</a></div>
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 2 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_2.jpg" alt="">
+								<div class="tag_offer property_tag"><a href="#">Offer</a></div>
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">House</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 3 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_3.jpg" alt="">
+								<div class="tag_featured property_tag"><a href="#">Featured</a></div>
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Home</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 4 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_4.jpg" alt="">
+								<div class="tag_new property_tag"><a href="#">New</a></div>
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 5 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_5.jpg" alt="">
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Somewhere</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 6 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_6.jpg" alt="">
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 7 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_7.jpg" alt="">
+								<div class="tag_new property_tag"><a href="#">New</a></div>
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 8 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_8.jpg" alt="">
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Property 9 -->
+					<div class="col-xl-4 col-lg-6 property_col">
+						<div class="property">
+							<div class="property_image">
+								<img src="images/property_9.jpg" alt="">
+							</div>
+							<div class="property_body text-center">
+								<div class="property_location">Texas</div>
+								<div class="property_title"><a th:href="@{/property}" href="property.html">Great Views</a></div>
+								<div class="property_price">$1,234</div>
+							</div>
+							<div class="property_footer d-flex flex-row align-items-center justify-content-start">
+								<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
+								<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
+								<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
+							</div>
+						</div>
+					</div>
+	
+				</div>
 				
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_1.jpg" alt="">
-							<div class="tag_featured property_tag"><a href="#">Featured</a></div>
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Texas</div>
-							<div class="property_title"><a href="property.html">Great Views</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_2.jpg" alt="">
-							<div class="tag_offer property_tag"><a href="#">Offer</a></div>
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Los Angeles</div>
-							<div class="property_title"><a href="property.html">2 Floor Town House</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_3.jpg" alt="">
-							<div class="tag_featured property_tag"><a href="#">Featured</a></div>
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Florida</div>
-							<div class="property_title"><a href="property.html">Vacation Home</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_4.jpg" alt="">
-							<div class="tag_new property_tag"><a href="#">New</a></div>
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Texas</div>
-							<div class="property_title"><a href="property.html">Great Views</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_5.jpg" alt="">
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Somewhere</div>
-							<div class="property_title"><a href="property.html">Great Views</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_6.jpg" alt="">
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Texas</div>
-							<div class="property_title"><a href="property.html">Great Views</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_7.jpg" alt="">
-							<div class="tag_new property_tag"><a href="#">New</a></div>
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Texas</div>
-							<div class="property_title"><a href="property.html">Great Views</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_8.jpg" alt="">
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Texas</div>
-							<div class="property_title"><a href="property.html">Great Views</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Property -->
-				<div class="col-xl-4 col-lg-6 property_col">
-					<div class="property">
-						<div class="property_image">
-							<img src="images/property_9.jpg" alt="">
-						</div>
-						<div class="property_body text-center">
-							<div class="property_location">Texas</div>
-							<div class="property_title"><a href="property.html">Great Views</a></div>
-							<div class="property_price">$1,234</div>
-						</div>
-						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
-							<div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>650 Ftsq</span></div>
-							<div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>3 Bedrooms</span></div>
-							<div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span>3 Bathrooms</span></div>
-						</div>
-					</div>
-				</div>
-
 			</div>
-			<div class="row">
-				<div class="col">
-					<div class="pagination">
+		</div>
+
+
+	<!-- Footer -->	
+
+	<footer>
+			<div class="footerwrapper">
+				<div class="footerAboutUs">
+					<h2><a href="#">About Us</a></h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				</div>
+				<div class="footerTestimonials">
+					<h2><a href="#">Testimonials</a></h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+				</div>
+				<div class="footerContactUs">
+					<h2>Contact Us</h2>
+					<h3>Kendrick Realty Design & Reno</h3>
+					<p><i class="fas fa-map-marker-alt"></i>123 Main Street, Austin, TX  78701</p>
+					<p><i class="fas fa-mobile-alt"></i>512-555-5555</p>
+					<p><a href="#"><i class="fas fa-envelope" id="email"></i>emailaddress@email.com</a></p>
+					<div class="socialIcons">
 						<ul>
-							<li class="active"><a href="#">01.</a></li>
-							<li><a href="#">02.</a></li>
-							<li><a href="#">03.</a></li>
-							<li><a href="#">04.</a></li>
+							<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<!-- Sidebar Search -->
-	<div class="sidebar_search">
-			<div class="sidebar_search_title">Search your home</div>
-			<div class="sidebar_search_form_container">
-				<form action="#" class="sidebar_search_form" id="sidebar_search_form">
-					<select class="sidebar_search_select">
-						<option disabled selected>Keywords</option>
-						<option>Pool</option>
-						<option>Porch</option>
-						<option>Garage</option>
-						<option>Garden</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>Property ID</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>Property Status</option>
-						<option>For Rent</option>
-						<option>Rented</option>
-						<option>Repairs</option>
-						<option>New Build</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>City</option>
-						<option>Somewhere</option>
-						<option>Anywhere</option>
-						<option>Nearby</option>
-						<option>Here</option>
-					</select>
-					<select class="sidebar_search_select">
-						<option disabled selected>Property Type</option>
-						<option>House</option>
-						<option>Condo</option>
-						<option>Apartment</option>
-						<option>Garage</option>
-					</select>
-					<div class="row sidebar_search_row">
-						<div class="col-lg-6">
-							<input type="text" class="sidebar_search_input" placeholder="Bedrooms No">
-						</div>
-						<div class="col-lg-6">
-							<input type="text" class="sidebar_search_input" placeholder="Bathrooms No">
-						</div>
-					</div>
-
-					<!-- Filter Price -->
-					<div class="price_filter">
-						<div class="price_filter_values d-flex flex-row align-items-center justfy-content-start">
-							<div>Min Price</div>
-							<div class="ml-auto">Max Price</div>
-						</div>
-						<input type="range" min="0" max="1000" step="10" value="250" data-rangeslider="" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
-					</div>
-
-					<!-- Filter Area -->
-					<div class="area_filter">
-						<div class="price_filter_values d-flex flex-row align-items-center justfy-content-start">
-							<div>Min Price</div>
-							<div class="ml-auto">Max Price</div>
-						</div>
-						<input type="range" min="0" max="1000" step="10" value="300" data-rangeslider="" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
-					</div>
-					<button class="sidebar_search_button_2 search_form_button_2">search</button>
-				</form>
+			<div class="bottomFooter">
+				<p>
+					<a href="#">Sitemap</a>
+					 | Real Estate Website Design by 
+					<a href="#">Team JavaBots</a>
+				</p>
 			</div>
-		</div>
+		</footer>
 	</div>
-</div>
-</div>
-</div>
-</div>
 
-	
-
-	<!-- Footer -->
-
-	<footer>
-        <div class="footerwrapper">
-            <div class="footerAboutUs">
-                <h2><a href="#">About Us</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="footerTestimonials">
-                <h2><a href="#">Testimonials</a></h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="footerContactUs">
-                <h2>Contact Us</h2>
-                <h3>Kendrick Realty Design & Reno</h3>
-                <p><i class="fas fa-map-marker-alt"></i>123 Main Street, Austin, TX  78701</p>
-                <p><i class="fas fa-mobile-alt"></i>512-555-5555</p>
-                <p><a href="#"><i class="fas fa-envelope" id="email"></i>emailaddress@email.com</a></p>
-                <div class="socialIcons">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="bottomFooter">
-            <p>
-                <a href="#">Sitemap</a>
-                 | Real Estate Website Design by 
-                <a href="#">Team JavaBots</a>
-            </p>
-        </div>
-    </footer>
-</div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
@@ -514,7 +533,9 @@
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/easing/easing.js"></script>
+<script src="plugins/rangeslider.js-2.3.0/rangeslider.min.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/properties.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>
